@@ -1,5 +1,5 @@
 <template>
-  <h1>검색 결과 페이지입니다.</h1>
+  <h1 data-test="search-page">검색 결과 페이지입니다.</h1>
 </template>
 
 <script>
