@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createRouter, createWebHashHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import DetailInfo from '../views/DetailInfo.vue';
@@ -22,10 +23,16 @@ const routes = [
     component: DetailInfo,
   },
 ];
+=======
+import { createRouter, createWebHistory } from 'vue-router';
+import baseRoute from '@/router/base';
+
+const finalRoute = [].concat(baseRoute);
+>>>>>>> 36ebcbd6ecd85b1dd7b9f66f1b050484d55aad6c
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes,
+  history: createWebHistory(process.env.BASE_URL),
+  routes: finalRoute,
 });
 
 export default router;
