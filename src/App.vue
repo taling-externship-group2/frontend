@@ -1,7 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 h-screen">
-    <router-view name="main"></router-view>
-  </div>
+  <router-view name="main"></router-view>
 </template>
 
 <script>
@@ -12,4 +10,7 @@ export default {
 </script>
 
 <style>
+#wrap {
+  min-width: 1200px;
+}
 </style>
