@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white shadow-lg" data-test="home-header">
+  <header class="bg-white" data-test="home-header">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex">
         <div class="flex w-2/3">
@@ -96,13 +96,26 @@
       </div>
     </div>
   </header>
-  <main></main>
+  <main>
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex">
+        <div class="flex w-2/3 left-column">
+          <RollingBanner></RollingBanner>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer></footer>
 </template>
 
 <script>
+import RollingBanner from '@/components/Home/RollingBanner.vue';
+
 export default {
   name: 'HomePage',
+  components: {
+    RollingBanner,
+  },
   data() {
     return {
       categories: [
@@ -122,4 +135,7 @@ export default {
 </script>
 
 <style>
+.left-column {
+  margin-top: -70px;
+}
 </style>
