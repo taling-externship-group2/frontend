@@ -2,7 +2,9 @@
   <section class="flex h-full w-screen xl:px-40 pt-24 px-6 relative">
     <div class="flex flex-col h-full">
       <div class="text-red-600 font-bold mb-2">다회차 · · 최대 50명</div>
-      <div class="text-2xl font-bold">멋쟁이사자처럼x탈잉 익스턴십</div>
+      <div class="text-2xl font-bold" data-test="DetailTitle">
+        멋쟁이사자처럼x탈잉 익스턴십
+      </div>
       <span class="flex mt-2">
         <img
           src="https://picsum.photos/200"
@@ -13,6 +15,7 @@
           <p class="text-sm mb-1">김진중 튜터</p>
           <div class="flex">
             <img
+              data-test="DetailmainImg"
               class="w-3 h-3 mr-1"
               src="https://front-img.taling.me/Content/Images/class/icon_star_new.png"
               alt="#"
@@ -22,7 +25,7 @@
         </div>
       </span>
       <!-- LIKE LION Part  -->
-      <div class="h-26 w-full mt-3 flex space-x-2">
+      <div class="h-26 w-full mt-3 flex space-x-2" data-test="DetailsubImg">
         <img
           class="rounded-2xl h-size26rem w-3/5 object-cover"
           src="https://img.taling.me/Content/Uploads/Cover/b5c21c3574c10df7e90e2494e84e6618670bee5a.png"
@@ -55,30 +58,30 @@
       <section class="w-4/5 pr-12">
         <div class="flex flex-col">
           <!-- 클래스 요약 -->
-          <section class="flex w-full mt-24">
+          <section class="flex w-full mt-24" data-test="ClassDetailDepth1">
             <div class="text-2xl font-bold w-56">클래스 요약</div>
-            <div class="leading-7">
+            <div class="leading-7" data-test="ClassDetailsDepth2">
               멋쟁이사자처럼에서 교육을 받은 개발자 분들과 2주간 탈잉에서
               제시하는 미션을 수행하며 실무 역량을 키우는 프로그램입니다.
             </div>
           </section>
           <!-- 클래스 요약 -->
           <!-- 이런 분들이 들으면 좋아요 -->
-          <section class="flex w-full mt-24">
+          <section class="flex w-full mt-24" data-test="ClassDetailDepth1">
             <div class="text-2xl font-bold w-56">
               이런 분들이
               <p>들으면</p>
               <p>좋아요.</p>
             </div>
-            <div class="leading-7">
+            <div class="leading-7" data-test="ClassDetailsDepth2">
               멋쟁이사자처럼 교육을 이수하신 분들 대상의 프로그램입니다.
               PHP/Laravel, TypeScript/Vue.js 개발자를 대상으로 합니다.
             </div>
           </section>
           <!-- 이런 분들이 들으면 좋아요 -->
           <!-- 튜터님을 소개합니다. -->
-          <section class="flex w-full mt-24">
-            <div class="text-2xl font-bold w-56">
+          <section class="flex w-full mt-24" data-test="ClassDetailDepth1">
+            <div class="text-2xl font-bold w-56" data-test="TutorIntro">
               튜터님을
               <p>소개합니다.</p>
             </div>
@@ -101,7 +104,7 @@
                   </a>
                 </div>
               </div>
-              <div class="mt-8">
+              <div class="mt-8" data-test="ClassDetailsDepth2">
                 Code addict, AI/ML believer, 20+ years’ coding experienced
                 start-up guy, Built a unicorn and building another big one!
               </div>
@@ -109,12 +112,12 @@
           </section>
           <!-- 튜터님을 소개합니다. -->
           <!-- 어떤 클래스 인가요? -->
-          <section class="flex mt-24">
+          <section class="flex mt-24" data-test="ClassDetailDepth1">
             <div class="text-2xl font-bold w-48">
               어떤 클래스<br />
               인가요?
             </div>
-            <div class="leading-6">
+            <div class="leading-6" data-test="ClassDetailsDepth2">
               # 목표
               <br />
               <br />
@@ -137,7 +140,7 @@
           </section>
           <!-- 어떤 클래스 인가요? -->
           <!-- 클래스는 이렇게 진행됩니다 -->
-          <section class="flex w-full mt-24">
+          <section class="flex w-full mt-24" data-test="ClassDetailDepth1">
             <div class="text-2xl font-bold w-48">
               클래스는 <br />이렇게<br />
               진행됩니다.
@@ -146,7 +149,7 @@
               <section>
                 <div class="text-red-600 font-bold text-lg">1회차 커리큘럼</div>
                 <br />
-                <div id="test1">
+                <div data-test="ClassDetailsDepth2">
                   2주간 진행할 미션에 대한 설명 및 팀 빌딩을 진행합니다.<br />
 
                   Frontend 와 Backend 각 1명씩 두 명이 팀이 되어 미션을
@@ -156,7 +159,7 @@
               <section>
                 <div class="text-red-600 font-bold text-lg">2회차 커리큘럼</div>
                 <br />
-                <div id="test1">
+                <div data-test="ClassDetailsDepth2">
                   API 및 기본 구조에 대한 피드백 세션을 진행합니다.<br />
 
                   각 팀당 30분씩 진행합니다. 진행은 별개 세션으로 진행합니다.<br /><br />
@@ -165,7 +168,7 @@
               <section>
                 <div class="text-red-600 font-bold text-lg">3회차 커리큘럼</div>
                 <br />
-                <div id="test1">
+                <div data-test="ClassDetailsDepth2">
                   개발한 결과에 대한 피드백 세션을 진행합니다.<br />
 
                   각 팀당 30분씩 진행합니다. 진행은 별개 세션으로 진행합니다.
@@ -175,13 +178,14 @@
           </section>
           <!-- 클래스는 이렇게 진행됩니다 -->
           <!-- 실제 수강생 리뷰 입니다. -->
-          <section class="flex w-full mt-24">
+          <section class="flex w-full mt-24" data-test="ClassDetailDepth1">
             <div class="text-2xl font-bold w-56">
               실제 <br />수강생의<br />
               리뷰입니다.
             </div>
             <div
               class="w-full h-24 border border-gray-300 rounded-sm ml-3 pl-4"
+              data-test="ClassDetailsDepth2"
             >
               <ul class="flex mt-6 gap-x-24">
                 <li class="flex items-center w-28 justify-around">
@@ -229,14 +233,6 @@
                       alt="#" /></span
                   ><span>0</span>
                 </li>
-                <!-- <li class="flex items-center w-28 justify-around">
-                    만족도<span
-                      ><img
-                        class="w-3 h-3 mr-1"
-                        src="https://front-img.taling.me/Content/Images/class/icon_star_new.png"
-                        alt="#" /></span
-                    ><span>0</span>
-                  </li> -->
               </ul>
             </div>
           </section>
@@ -262,7 +258,7 @@
           p-3
         "
       >
-        <section class="text-3xl font-bold">클래스 일정</section>
+        <section class="text-3xl font-bold" data-test="ClassSchedule">클래스 일정</section>
         <!-- 상세 일정 -->
         <section class="space-y-2 overscroll-y-auto h-60">
           <div class="flex mt-3 text-sm justify-between">
@@ -300,12 +296,14 @@
             "
           >
             <img
+            data-test="ClassHeart"
               class="w-5 h-4 mx-auto"
               src="https://front-img.taling.me/Content/app3/images/p2p_class/ico_p2p_wish_on.png"
               alt="#"
             />
           </div>
           <div
+          data-test="ClassBuy"
             class="
               w-4/5
               drop-shadow-shadowCustom
