@@ -1,8 +1,8 @@
 <template>
   <section data-test="talent-detail-page">
     <div>상세정보 페이지</div>
-    <section class="flex h-screen w-screen xl:px-40 pt-24">
-      <div class="flex flex-col w-3/5 h-screen">
+    <section class="flex h-screen w-screen xl:px-40 pt-24 px-6">
+      <div class="flex flex-col h-screen">
         <div class="text-red-600 font-bold mb-2">다회차 · · 최대 50명</div>
         <div class="text-2xl font-bold">멋쟁이사자처럼x탈잉 익스턴십</div>
         <span class="flex mt-2">
@@ -190,11 +190,11 @@
                 실제 <br />수강생의<br />
                 리뷰입니다.
               </div>
-              <div class="w-full h-24 border border-gray-300 rounded-sm ml-3">
-                <ul class="flex justify-around mt-6">
-                  <li
-                    class="flex items-center w-28 justify-around justify-around"
-                  >
+              <div
+                class="w-full h-24 border border-gray-300 rounded-sm ml-3 pl-16"
+              >
+                <ul class="flex mt-6 gap-x-24">
+                  <li class="flex items-center w-28 justify-around">
                     커리큘럼
                     <span
                       ><img
@@ -222,7 +222,7 @@
                     ><span>0</span>
                   </li>
                 </ul>
-                <ul class="flex justify-around">
+                <ul class="flex gap-x-24">
                   <li class="flex items-center w-28 justify-around">
                     준비성<span
                       ><img
@@ -239,20 +239,20 @@
                         alt="#" /></span
                     ><span>0</span>
                   </li>
-                  <li class="flex items-center w-28 justify-around">
+                  <!-- <li class="flex items-center w-28 justify-around">
                     만족도<span
                       ><img
                         class="w-3 h-3 mr-1"
                         src="https://front-img.taling.me/Content/Images/class/icon_star_new.png"
                         alt="#" /></span
                     ><span>0</span>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </section>
             <div class="flex justify-between ml-48">
               <div class="text-right">튜터님 수업에 첫 리뷰를 달아주세요</div>
-              <div class="underline-offset-1 cursor-pointer mb-24">
+              <div class="underline underline-offset-1 cursor-pointer mb-24">
                 리뷰 작성하기
               </div>
             </div>
@@ -338,10 +338,18 @@
     </section>
     <!-- 클래스 일정 -->
   </section>
+  <footer>
+    <FooterCom />
+  </footer>
 </template>
 
 <script>
+import FooterCom from '@/components/FooterCom.vue';
+
 export default {
+  components: {
+    FooterCom,
+  },
   name: 'TalentDetailPage',
 };
 </script>
