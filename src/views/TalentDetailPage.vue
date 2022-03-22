@@ -1,5 +1,5 @@
 <template>
-  <section class="flex h-full w-screen xl:px-40 pt-24 px-6 absolute">
+  <section class="flex h-full w-screen xl:px-40 pt-24 px-6 relative">
     <div class="flex flex-col h-full">
       <div class="text-red-600 font-bold mb-2">다회차 · · 최대 50명</div>
       <div class="text-2xl font-bold">멋쟁이사자처럼x탈잉 익스턴십</div>
@@ -24,7 +24,7 @@
       <!-- LIKE LION Part  -->
       <div class="h-26 w-full mt-3 flex space-x-2">
         <img
-          class="rounded-2xl h-size26rem w-4/5 object-cover"
+          class="rounded-2xl h-size26rem w-3/5 object-cover"
           src="https://img.taling.me/Content/Uploads/Cover/b5c21c3574c10df7e90e2494e84e6618670bee5a.png"
           alt="#"
         />
@@ -52,7 +52,7 @@
         </div>
       </div>
       <!-- Text Section -->
-      <section class="w-full pr-12">
+      <section class="w-4/5 pr-12">
         <div class="flex flex-col">
           <!-- 클래스 요약 -->
           <section class="flex w-full mt-24">
@@ -181,7 +181,7 @@
               리뷰입니다.
             </div>
             <div
-              class="w-full h-24 border border-gray-300 rounded-sm ml-3 pl-16"
+              class="w-full h-24 border border-gray-300 rounded-sm ml-3 pl-4"
             >
               <ul class="flex mt-6 gap-x-24">
                 <li class="flex items-center w-28 justify-around">
@@ -250,7 +250,7 @@
         </div>
       </section>
     </div>
-    <div class="w-80 h-screen hidden 2xl:block relative">
+    <div class="w-80 h-screen hidden 2xl:block sticky right-80 top-0">
       <div
         class="
           rounded-sm
@@ -260,7 +260,6 @@
           w-80
           drop-shadow-shadowCustom
           p-3
-          fixed
         "
       >
         <section class="text-3xl font-bold">클래스 일정</section>
@@ -327,10 +326,10 @@
       </div>
     </div>
   </section>
-  <!-- 클래스 일정 -->
   <footer>
     <FooterCom />
   </footer>
+  <!-- 클래스 일정 -->
 </template>
 
 <script>
@@ -345,7 +344,4 @@ export default {
 </script>
 
 <style>
-#test1 {
-  @apply whitespace-nowrap;
-}
 </style>
