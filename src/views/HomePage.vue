@@ -99,8 +99,9 @@
   <main>
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex">
-        <div class="flex w-2/3 left-column">
+        <div class="flex flex-col w-2/3 left-column">
           <RollingBanner></RollingBanner>
+          <TalentsList></TalentsList>
         </div>
       </div>
     </div>
@@ -110,11 +111,13 @@
 
 <script>
 import RollingBanner from '@/components/Home/RollingBanner.vue';
+import TalentsList from '@/components/Home/TalentsList.vue';
 
 export default {
   name: 'HomePage',
   components: {
     RollingBanner,
+    TalentsList,
   },
   data() {
     return {
