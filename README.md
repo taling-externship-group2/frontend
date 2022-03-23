@@ -40,12 +40,12 @@
 
 ### 김호균
 
-- Home 페이지 / Header Component(main) / RollingBanner / Class List Component 
+- Home 페이지 / Header Component(main) / RollingBanner / Class List Component / Readme
 - 사용 API
   - @
 
 ### 고영진
- - Detail 페이지 / FooterComponent
+ - Detail 페이지 / FooterComponent / Readme
  - 사용 API
    - @
 
