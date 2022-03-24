@@ -1,5 +1,17 @@
 <template>
-  <section class="flex h-full w-screen xl:px-40 pt-24 px-6 relative">
+  <HeaderCom />
+  <section
+    class="
+      flex
+      h-full
+      w-screen
+      xl:px-40
+      pt-24
+      px-6
+      relative
+      border-t-2 border-gray-100
+    "
+  >
     <div class="flex flex-col h-full">
       <div class="text-red-600 font-bold mb-2">다회차 · · 최대 50명</div>
       <div class="text-2xl font-bold" data-test="DetailTitle">
@@ -51,9 +63,9 @@
       <section class="w-4/5 pr-12 flex flex-col">
         <div v-for="classTitle in classTitles" :key="classTitle.title">
           <!-- 클래스 요약 -->
-          <section class="flex w-full mt-24" data-test="ClassDetailDepth1">
+          <section class="flex w-full mt-24" data-test="classContentsTitle">
             <div class="text-2xl font-bold w-1/5">{{ classTitle.title }}</div>
-            <div class="leading-7 ml-12 w-4/5" data-test="ClassDetailsDepth2">
+            <div class="leading-7 ml-12 w-4/5" data-test="classContentsText">
               {{ classTitle.introText }}
             </div>
           </section>
@@ -61,13 +73,13 @@
         <!-- 어떤 클래스 인가요? -->
         <div v-for="queTitle in queTitles" :key="queTitle.title">
           <!-- 클래스 요약 -->
-          <section class="flex w-full mt-24" data-test="ClassDetailDepth1">
+          <section class="flex w-full mt-24" data-test="classContentsTitle">
             <div class="text-2xl font-bold w-1/5">
               {{ queTitle.title }}
             </div>
             <div
               class="leading-7 ml-12 w-4/5 whitespace-pre-line"
-              data-test="ClassDetailsDepth2"
+              data-test="classContentsText"
             >
               {{ queTitle.introText }}
             </div>
@@ -75,14 +87,14 @@
         </div>
         <div>
           <!-- 클래스 요약 -->
-          <section class="flex w-full mt-24" data-test="ClassDetailDepth1">
+          <section class="flex w-full mt-24" data-test="classContentsTitle">
             <div class="text-2xl font-bold w-1/5">
               {{ processTitle }}
             </div>
             <div class="flex flex-col w-4/5 ml-8">
               <div
                 class="leading-7 ml-6 whitespace-pre-line"
-                data-test="ClassDetailsDepth2"
+                data-test="classContentsText"
                 v-for="processIntro in processIntros"
                 :key="processIntro.title"
               >
@@ -95,7 +107,7 @@
           </section>
         </div>
         <!-- 실제 수강생 리뷰 입니다. -->
-        <section class="flex w-full mt-24" data-test="ClassDetailDepth1">
+        <section class="flex w-full mt-24" data-test="classContentsTitle">
           <div class="text-2xl font-bold w-1/5">
             {{ reviewTitle }}
           </div>
@@ -108,7 +120,7 @@
               flex flex-col
               w-4/5
             "
-            data-test="ClassDetailsDepth2"
+            data-test="classContentsText"
           >
             <div class="flex mx-12 mt-6 gap-x-14">
               <div
@@ -255,10 +267,12 @@
 
 <script>
 import FooterCom from '@/components/FooterCom.vue';
+import HeaderCom from '@/components/SearchHeaderCom.vue';
 
 export default {
   components: {
     FooterCom,
+    HeaderCom,
   },
   name: 'TalentDetailPage',
   data() {
