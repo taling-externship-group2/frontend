@@ -1,6 +1,6 @@
 <template>
   <div data-test="search-page">
-    <div class="box-border h-[105px] border-1"></div>
+    <div class="box-border h-[105px] border-1">header</div>
     <div class="box-border border-2 flex flex-col">
       <div class="flex justify-center box-border h-[61px] border-1">
         <button
@@ -44,11 +44,11 @@
         </div>
         <div class="flex flex-row">
           <div class="text-xl bg-slate-100 m-5 font-extrabold">수업형태</div>
-          <div class="flex m-3 bg-white h-[40px] w-auto box-border border-2"
+          <div class="flex m-3 bg-white h-auto w-auto box-border border-2"
             v-for="(type, index) in class_type_arr" :key="index">
-            <button class="p-2">{{ type }}</button>
+            <button class="p-1">{{ type }}</button>
           </div>
-          <button class="bg-slate-500 px-4 h-[40px] m-3 text-white">내게 맞는 수업 보기</button>
+          <button class="bg-slate-500 px-4 h-auto m-3 text-white">내게 맞는 수업 보기</button>
         </div>
         <div class=""></div>
         <div class=""></div>
@@ -57,14 +57,18 @@
         @mouseover="showoffModal" @focus="bar"
         v-bind:class="[margin_top]"
         class="box-border h-[1770px] border-2 flex flex-row justify-center flex-nowrap">
-        <div class="box-border h-[320px] w-[326.66px] border-2"></div>
-        <div class="box-border h-[320px] w-[326.66px] border-2"></div>
-        <div class="box-border h-[320px] w-[326.66px] border-2"></div>
+        <div class="m-10 box-border h-[320px] w-[326.66px] border-2"></div>
       </div>
     </div>
-    <div class="box-border h-[51.4px] border-2"></div>
-    <div class="box-border h-[50px] border-2"></div>
-    <div class="box-border h-[374.8px] border-2"></div>
+    <div class="text-xl flex flex-row h-[51.4px] list-none justify-center">
+      <li class="m-5">1</li>
+      <li class="m-5">2</li>
+      <li class="m-5">3</li>
+      <li class="m-5">4</li>
+      <li class="m-5">| 다음</li>
+    </div>
+    <div class="h-[50px]"></div>
+    <div class="box-border h-[374.8px] border-2">footer</div>
   </div>
 </template>
 
