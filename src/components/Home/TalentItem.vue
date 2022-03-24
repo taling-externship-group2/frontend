@@ -136,7 +136,9 @@ export default {
         hourlyPrice = this.discounted_price / hour;
       }
       return minute === 0
-        ? `(총 ${hour}시간 / 시간당${this.priceWithFormat(hourlyPrice)})`
+        ? `(총 ${hour}시간 / 시간당${this.priceWithFormat(
+          Math.round(hourlyPrice),
+        )})`
         : `(총 ${hour}시간 ${minute}분)`;
     },
   },
