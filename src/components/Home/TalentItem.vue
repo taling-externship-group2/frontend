@@ -1,11 +1,26 @@
 <template>
-  <li class="w-1/3 px-2 py-2" :data-test="id">
+  <li class="w-1/3 px-2 py-2 relative" :data-test="id">
     <img
       :src="image"
       class="w-full h-32 rounded-lg"
       alt="thumb-image"
       data-test="talent-thumb-image"
     />
+    <button
+      class="
+        absolute
+        top-0
+        right-0
+        bg-transparent
+        text-white
+        p-1
+        rounded-full
+        m-1
+      "
+      @click="addWish()"
+    >
+      <img :src="wishImage" class="w-10 h-10" alt="wishImage" />
+    </button>
     <!--card-description-->
     <div class="flex flex-row" data-test="description-wrapper ">
       <div
@@ -66,6 +81,12 @@
 
 <script>
 export default {
+  data() {
+    return {
+      wishImage:
+        'https://front-img.taling.me/Content/app3/img/icon/icWishUnclickedLine38Px@2x.png',
+    };
+  },
   props: {
     id: { type: String, default: '' },
     image: { type: String, default: '' },
@@ -91,6 +112,9 @@ export default {
     },
     discountRateWithFormat(rate) {
       return `${rate}%`;
+    },
+    addWish() {
+      alert('찜에 등록되었습니다.');
     },
   },
   computed: {
