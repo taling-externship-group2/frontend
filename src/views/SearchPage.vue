@@ -57,7 +57,12 @@
         @mouseover="showoffModal" @focus="bar"
         v-bind:class="[margin_top]"
         class="box-border h-[1770px] border-2 flex flex-row justify-center flex-nowrap">
-        <div class="m-10 box-border h-[320px] w-[326.66px] border-2"></div>
+        <div v-for="(item, index) in class_list_axios.class_list" :key="index"
+          class="m-10 box-border h-[320px] w-[326.66px] border-2">
+          <SearchClass
+            :class_object="item"
+          />
+        </div>
       </div>
     </div>
     <div class="text-xl flex flex-row h-[51.4px] list-none justify-center">
@@ -74,11 +79,13 @@
 
 <script>
 import MenuList from '@/components/Search/MenuList.vue';
+import SearchClass from '@/components/Search/SearchClass.vue';
 
 export default {
   name: 'SearchPage',
   components: {
     MenuList,
+    SearchClass,
   },
   data() {
     return {
@@ -104,6 +111,129 @@ export default {
         '디자인/영상',
         '외국어',
       ],
+      class_list_axios: {
+        category: '인기수업',
+        class_num: 15,
+        class_list: [
+          {
+            title: '온라인 팀프로젝트로 배우는 아이디어 발상법, 디자인씽킹',
+            onedayclass: true,
+            class_type: '온라인 Live',
+            love_num: 10,
+            class_url: 'url',
+            review_num: 10,
+            host: '서유경',
+            host_img_url: 'url',
+            nickname: '유다',
+            price_per_hour: 27500,
+            rate: 5,
+          },
+          {
+            title: '온라인 팀프로젝트로 배우는 아이디어 발상법, 디자인씽킹',
+            onedayclass: true,
+            class_type: '온라인 Live',
+            love_num: 10,
+            class_url: 'url',
+            review_num: 10,
+            host: '서유경',
+            host_img_url: 'url',
+            nickname: '유다',
+            price_per_hour: 27500,
+            rate: 5,
+          },
+          {
+            title: '온라인 팀프로젝트로 배우는 아이디어 발상법, 디자인씽킹',
+            onedayclass: true,
+            class_type: '온라인 Live',
+            love_num: 10,
+            class_url: 'url',
+            review_num: 10,
+            host: '서유경',
+            host_img_url: 'url',
+            nickname: '유다',
+            price_per_hour: 27500,
+            rate: 5,
+          },
+          {
+            title: '온라인 팀프로젝트로 배우는 아이디어 발상법, 디자인씽킹',
+            onedayclass: true,
+            class_type: '온라인 Live',
+            love_num: 10,
+            class_url: 'url',
+            review_num: 10,
+            host: '서유경',
+            host_img_url: 'url',
+            nickname: '유다',
+            price_per_hour: 27500,
+            rate: 5,
+          },
+          {
+            title: '온라인 팀프로젝트로 배우는 아이디어 발상법, 디자인씽킹',
+            onedayclass: true,
+            class_type: '온라인 Live',
+            love_num: 10,
+            class_url: 'url',
+            review_num: 10,
+            host: '서유경',
+            host_img_url: 'url',
+            nickname: '유다',
+            price_per_hour: 27500,
+            rate: 5,
+          },
+          {
+            title: '온라인 팀프로젝트로 배우는 아이디어 발상법, 디자인씽킹',
+            onedayclass: true,
+            class_type: '온라인 Live',
+            love_num: 10,
+            class_url: 'url',
+            review_num: 10,
+            host: '서유경',
+            host_img_url: 'url',
+            nickname: '유다',
+            price_per_hour: 27500,
+            rate: 5,
+          },
+          {
+            title: '온라인 팀프로젝트로 배우는 아이디어 발상법, 디자인씽킹',
+            onedayclass: true,
+            class_type: '온라인 Live',
+            love_num: 10,
+            class_url: 'url',
+            review_num: 10,
+            host: '서유경',
+            host_img_url: 'url',
+            nickname: '유다',
+            price_per_hour: 27500,
+            rate: 5,
+          },
+          {
+            title: '온라인 팀프로젝트로 배우는 아이디어 발상법, 디자인씽킹',
+            onedayclass: true,
+            class_type: '온라인 Live',
+            love_num: 10,
+            class_url: 'url',
+            review_num: 10,
+            host: '서유경',
+            host_img_url: 'url',
+            nickname: '유다',
+            price_per_hour: 27500,
+            rate: 5,
+          },
+          {
+            title: '온라인 팀프로젝트로 배우는 아이디어 발상법, 디자인씽킹',
+            onedayclass: true,
+            class_type: '온라인 Live',
+            love_num: 10,
+            class_url: 'url',
+            review_num: 10,
+            host: '서유경',
+            host_img_url: 'url',
+            nickname: '유다',
+            price_per_hour: 27500,
+            rate: 5,
+          },
+        ],
+      },
     };
   },
   methods: {
