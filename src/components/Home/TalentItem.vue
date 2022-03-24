@@ -1,20 +1,41 @@
 <template>
-  <li class="w-1/3 px-2 py-2" :data-test="id">
+  <li class="w-1/3 px-2 py-2 relative" :data-test="id">
     <img
       :src="image"
       class="w-full h-32 rounded-lg"
       alt="thumb-image"
       data-test="talent-thumb-image"
     />
+    <button
+      class="
+        absolute
+        top-0
+        right-0
+        bg-transparent
+        text-white
+        p-1
+        rounded-full
+        m-1
+      "
+      data-test="wish-btn"
+      @click="addWish()"
+    >
+      <img :src="wishImage" class="w-10 h-10" alt="wishImage" />
+    </button>
     <!--card-description-->
     <div class="flex flex-row" data-test="description-wrapper ">
       <div
         v-for="badge in badge_list"
         :key="badge"
-        class="text-xs"
+        class="text-xs my-1"
         data-test="badge_lists"
       >
-        <span data-test="badge">{{ badge }}</span>
+        <span
+          class="bg-purple-400 text-white px-2 rounded-sm mr-0.5"
+          data-test="badge"
+        >
+          {{ badge }}
+        </span>
       </div>
     </div>
     <h4 class="flex" data-test="talent-title">{{ talent_title }}</h4>
@@ -66,6 +87,12 @@
 
 <script>
 export default {
+  data() {
+    return {
+      wishImage:
+        'https://front-img.taling.me/Content/app3/img/icon/icWishUnclickedLine38Px@2x.png',
+    };
+  },
   props: {
     id: { type: String, default: '' },
     image: { type: String, default: '' },
@@ -92,6 +119,10 @@ export default {
     discountRateWithFormat(rate) {
       return `${rate}%`;
     },
+    addWish() {
+      // eslint-disable-next-line
+      alert('찜에 등록되었습니다.');
+    },
   },
   computed: {
     totalDurationFormat() {
@@ -105,7 +136,9 @@ export default {
         hourlyPrice = this.discounted_price / hour;
       }
       return minute === 0
-        ? `(총 ${hour}시간 / 시간당${this.priceWithFormat(hourlyPrice)})`
+        ? `(총 ${hour}시간 / 시간당${this.priceWithFormat(
+          Math.round(hourlyPrice),
+        )})`
         : `(총 ${hour}시간 ${minute}분)`;
     },
   },
