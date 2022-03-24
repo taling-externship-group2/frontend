@@ -17,6 +17,7 @@
         rounded-full
         m-1
       "
+      data-test="wish-btn"
       @click="addWish()"
     >
       <img :src="wishImage" class="w-10 h-10" alt="wishImage" />
@@ -26,10 +27,15 @@
       <div
         v-for="badge in badge_list"
         :key="badge"
-        class="text-xs"
+        class="text-xs my-1"
         data-test="badge_lists"
       >
-        <span data-test="badge">{{ badge }}</span>
+        <span
+          class="bg-purple-400 text-white px-2 rounded-sm mr-0.5"
+          data-test="badge"
+        >
+          {{ badge }}
+        </span>
       </div>
     </div>
     <h4 class="flex" data-test="talent-title">{{ talent_title }}</h4>
@@ -114,6 +120,7 @@ export default {
       return `${rate}%`;
     },
     addWish() {
+      // eslint-disable-next-line
       alert('찜에 등록되었습니다.');
     },
   },
