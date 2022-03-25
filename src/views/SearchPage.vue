@@ -56,12 +56,14 @@
       <div
         @mouseover="showoffModal" @focus="bar"
         v-bind:class="[margin_top]"
-        class="box-border h-[1770px] border-2 flex flex-row justify-center flex-nowrap">
-        <div v-for="(item, index) in class_list_axios.class_list" :key="index"
-          class="m-10 box-border h-[320px] w-[326.66px] border-2">
-          <SearchClass
-            :class_object="item"
-          />
+        class="box-border h-auto border-2 flex justify-center">
+        <div class="w-[1100px] h-auto
+            flex flex-row flex-wrap justify-center content-center">
+          <div v-for="(item, index) in class_list_axios.class_list" :key="index">
+            <SearchClass
+              :class_object="item"
+            />
+          </div>
         </div>
       </div>
     </div>
