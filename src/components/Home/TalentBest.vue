@@ -3,7 +3,7 @@
     <h1 class="font-bold pl-2">탈잉 BEST</h1>
     <ul class="flex flex-wrap">
       <TalentItem
-        v-for="talent in talents"
+        v-for="talent in talentsApi"
         :key="talent.id"
         v-bind="talent"
       ></TalentItem>
@@ -13,6 +13,7 @@
 
 <script>
 import TalentItem from '@/components/Home/TalentItem.vue';
+import TalentItemApi from '@/api/Home/TalentList';
 
 export default {
   components: {
@@ -47,9 +48,9 @@ export default {
           total_duration: 473,
           wish_count: 9123,
           review_count: 123,
-          category: '엑셀',
-          tutor_name: '쏘피',
-          talent_title: '실무에 진짜 필요한 엑셀 노하우',
+          category: '프로그래밍',
+          tutor_name: 'Evan you',
+          talent_title: 'Vue.js 마스터하기',
         },
         {
           id: '3',
@@ -86,15 +87,15 @@ export default {
           image:
             'https://s3.ap-northeast-2.amazonaws.com/taling.me/Content/Uploads/Cover/s_2fc10a29b668264a373a469e2fbad8cea8b63894.png',
           badge_list: ['LIVE', '녹화영상'],
-          original_price: 17600,
+          original_price: 999999,
           discounted_price: 0,
           discount_rate: 0,
           total_duration: 240,
           wish_count: 9123,
           review_count: 123,
-          category: '엑셀',
-          tutor_name: '쏘피',
-          talent_title: '실무에 진짜 필요한 엑셀 노하우',
+          category: '프로그래밍',
+          tutor_name: 'Linus Torvalds',
+          talent_title: '심심풀이로 리눅스 같은 프로젝트 만들기',
         },
         {
           id: '6',
@@ -112,7 +113,14 @@ export default {
           talent_title: '실무에 진짜 필요한 엑셀 노하우',
         },
       ],
+      talentsApi: [],
     };
+  },
+
+  async created() {
+    const apiClient = new TalentItemApi();
+    const response = await apiClient.getTalentListBest();
+    this.talentsApi = this.talents.concat(response.data);
   },
 };
 </script>
