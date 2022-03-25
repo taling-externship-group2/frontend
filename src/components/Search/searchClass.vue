@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'searchClass',
+  name: 'SearchClass',
   props: {
     class_object: Object,
   },
