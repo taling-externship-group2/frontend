@@ -61,6 +61,7 @@
               <button
                 class="absolute inset-y-0 right-0 flex items-center pr-6"
                 data-test="search-button"
+                @click="search()"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -106,18 +107,22 @@
       </div>
     </div>
   </main>
-  <footer></footer>
+  <footer>
+    <Footer />
+  </footer>
 </template>
 
 <script>
 import RollingBanner from '@/components/Home/RollingBanner.vue';
 import TalentsList from '@/components/Home/TalentsList.vue';
+import Footer from '@/components/FooterCom.vue';
 
 export default {
   name: 'HomePage',
   components: {
     RollingBanner,
     TalentsList,
+    Footer,
   },
   data() {
     return {
@@ -133,6 +138,12 @@ export default {
         { id: 'C9', name: '커리어' },
       ],
     };
+  },
+
+  methods: {
+    search() {
+      this.$router.push('/Home/Search/');
+    },
   },
 };
 </script>
