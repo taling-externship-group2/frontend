@@ -3,7 +3,7 @@
     <h1 class="font-bold pl-2">탈잉 BEST</h1>
     <ul class="flex flex-wrap">
       <TalentItem
-        v-for="talent in talents"
+        v-for="talent in talentsApi"
         :key="talent.id"
         v-bind="talent"
       ></TalentItem>
@@ -13,6 +13,7 @@
 
 <script>
 import TalentItem from '@/components/Home/TalentItem.vue';
+import TalentItemApi from '@/api/Home/TalentList';
 
 export default {
   components: {
@@ -112,7 +113,14 @@ export default {
           talent_title: '실무에 진짜 필요한 엑셀 노하우',
         },
       ],
+      talentsApi: [],
     };
+  },
+
+  async created() {
+    const apiClient = new TalentItemApi();
+    const response = await apiClient.getTalentListBest();
+    this.talentsApi = this.talents.concat(response.data);
   },
 };
 </script>
