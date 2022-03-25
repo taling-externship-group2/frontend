@@ -45,7 +45,7 @@
   - 홈페이지/탈잉BEST 목록 가져오기
 
 ### 고영진
- - Detail 페이지 / FooterComponent / Readme / searchDetailHeader Cmponent
+ - Detail 페이지 / FooterComponent / Readme / searchDetailHeader Cmponent / issue Labels Add / issue template
  - 사용 API
    - 상세항목에 대한 ID값 부여
 
