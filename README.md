@@ -42,19 +42,35 @@
 
 - Home 페이지 / Header Component(main) / RollingBanner / Class List Component / Readme
 - 사용 API
-  - @
+  - 홈페이지/탈잉BEST 목록 가져오기
 
 ### 고영진
  - Detail 페이지 / FooterComponent / Readme
  - 사용 API
-   - @
+   - 상세항목에 대한 ID값 부여
 
 ### 이태성
  - Search 페이지 / Header Component(Search, Detail)
  - 사용 API
-   - @
+   - 홈페이지/카테고리에 따른 클래스 목록 가져오기
 
 ## UI
+![image](https://user-images.githubusercontent.com/70947883/160116106-367df657-bcad-483a-aa2e-f5b98b5f6d48.png)
+
+## 개발하며 고민한 부분 및 해결 방법
+# 김호균
+ - 설계시 욕심을 부리지 말것
+ - 마크업 구현 능력 연습을 꾸준히 진행
+ - 프론트에서 자주사용하는 component element들을 외부 라이브러리 없이 구현하는 연습
+
+#고영진
+ - etail page API 내용 전달 커뮤니케이션이 원활하지 않아 Data를 적용하지 못하였음
+    - 자체적으로 json 파일을 만들어 더미 API 사용 연습
+ - css 를 활용하여 버튼 기능을 변경 하도록 연습
+
+#이태성
+ - 예상치 못하게 axios에서 cors 문제
+ - 생각지 못했던 menu list 동적 ui가 시간을 많이 소모 했습니다.
 
 
 ## Project setup
