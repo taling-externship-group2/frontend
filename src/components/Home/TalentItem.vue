@@ -1,5 +1,5 @@
 <template>
-  <li class="w-1/3 px-2 py-2 relative" :data-test="id">
+  <li class="w-1/3 min-w-[25%] px-2 py-2 relative" :data-test="id">
     <img
       :src="image"
       class="w-full h-32 rounded-lg"
