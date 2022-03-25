@@ -81,7 +81,7 @@
 
 <script>
 import MenuList from '@/components/Search/MenuList.vue';
-import SearchClass from '@/components/Search/SearchClass.vue';
+import SearchClass from '@/components/Search/searchClass.vue';
 
 export default {
   name: 'SearchPage',
