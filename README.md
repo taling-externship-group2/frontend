@@ -45,12 +45,12 @@
   - 홈페이지/탈잉BEST 목록 가져오기
 
 ### 고영진
- - Detail 페이지 / FooterComponent / Readme
+ - Detail 페이지 / FooterComponent / Readme / searchDetailHeader COmponent
  - 사용 API
    - 상세항목에 대한 ID값 부여
 
 ### 이태성
- - Search 페이지 / Header Component(Search, Detail)
+ - Search 페이지
  - 사용 API
    - 홈페이지/카테고리에 따른 클래스 목록 가져오기
 
