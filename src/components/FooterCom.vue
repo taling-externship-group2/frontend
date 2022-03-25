@@ -5,16 +5,16 @@
   >
     <ul class="flex gap-x-36 pt-10 truncate">
       <li>
-        <p id="depth1" data-test="footerDepth1">COMPANY</p>
-        <ul id="depth2" data-test="fotterDepth2">
+        <p id="depth1" data-test="fotterTitleCard">COMPANY</p>
+        <ul id="depth2" data-test="footerSubCard">
           <li>회사 소개</li>
           <li>블로그</li>
           <li>언론 보도</li>
         </ul>
       </li>
       <li>
-        <p id="depth1" data-test="footerDepth1">POLICIES</p>
-        <ul id="depth2" data-test="fotterDepth2">
+        <p id="depth1" data-test="fotterTitleCard">POLICIES</p>
+        <ul id="depth2" data-test="footerSubCard">
           <li>이용약관</li>
           <li class="underline underline-offset-1 font-bold">
             개인정보처리방침
@@ -22,21 +22,21 @@
         </ul>
       </li>
       <li>
-        <p id="depth1" data-test="footerDepth1">SUPPORT</p>
-        <ul id="depth2" data-test="fotterDepth2">
+        <p id="depth1" data-test="fotterTitleCard">SUPPORT</p>
+        <ul id="depth2" data-test="footerSubCard">
           <li>FAQ</li>
           <li>탈잉센터</li>
         </ul>
       </li>
       <li>
-        <p id="depth1" data-test="footerDepth1">B2B</p>
-        <ul id="depth2" data-test="fotterDepth2">
+        <p id="depth1" data-test="fotterTitleCard">B2B</p>
+        <ul id="depth2" data-test="footerSubCard">
           <li>기업교육</li>
           <li>브랜드제휴</li>
         </ul>
       </li>
       <li>
-        <p id="depth1" data-test="footerDepth1">TALING CENTER</p>
+        <p id="depth1" data-test="footerSubCard">TALING CENTER</p>
         <ul id="depth2-Center" data-test="footerCenter">
           <li class="text-red-600 flex cursor-pointer">
             <img
@@ -53,7 +53,11 @@
         </ul>
       </li>
     </ul>
-    <div id="footerBottom" class="flex gap-x-28 h-60" data-test="footerBottom">
+    <div
+      id="footerCopyCard"
+      class="flex gap-x-28 h-60"
+      data-test="footerCopyCard"
+    >
       <div class="text-gray-500 gap-y-2 flex flex-col mt-6">
         <p>
           상호 : (주)탈잉 | 주소 : 서울특별시 강남구 테헤란로 625 6층 |
