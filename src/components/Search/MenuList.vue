@@ -1,7 +1,7 @@
 <template>
   <div
     class="
-      flex flex-row
+      flex flex-row justify-center
       text-base
       absolute z-10 bg-white box-border h-[217px] w-full border-2">
     <button class="m-3 h-10" v-for="(menu, index) in this.menu_list[this.menu_num]" :key="index">
