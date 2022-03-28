@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import RollingBanner from '@/components/Home/RollingBanner.vue';
+import RollingBanner from '@/views/Home/RollingBanner.vue';
 
 describe('롤리베너 컴포넌트의 존재해야할 element에 대한 테스트 입니다.', () => {
   const wrapper = mount(RollingBanner);
