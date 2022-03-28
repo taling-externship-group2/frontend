@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import TalentsList from '@/components/Home/TalentsList.vue';
+import TalentsList from '@/views/Home/TalentsWrapper.vue';
 
 describe('클래스 목록을 표시해주는 영역에 대한 테스트 입니다.', () => {
   const wrapper = mount(TalentsList);

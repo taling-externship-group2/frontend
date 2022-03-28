@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import TalentBest from '@/components/Home/TalentBest.vue';
-import TalentRecommended from '@/components/Home/TalentRecommended.vue';
+import TalentBest from '@/views/Home/TalentBest.vue';
+import TalentRecommended from '@/views/Home/TalentRecommended.vue';
 
 export default {
   components: {

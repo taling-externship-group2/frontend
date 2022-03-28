@@ -113,8 +113,8 @@
 </template>
 
 <script>
-import RollingBanner from '@/components/Home/RollingBanner.vue';
-import TalentsList from '@/components/Home/TalentsList.vue';
+import RollingBanner from '@/views/Home/RollingBanner.vue';
+import TalentsList from '@/views/Home/TalentsWrapper.vue';
 import Footer from '@/components/FooterCom.vue';
 
 export default {

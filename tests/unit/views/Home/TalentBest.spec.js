@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import TalentBest from '@/components/Home/TalentBest.vue';
+import TalentBest from '@/views/Home/TalentBest.vue';
 
 describe('탈잉 BEST 탭 영역에 대한 element존재 여부를 검증합니다.', () => {
   const wrapper = mount(TalentBest);
