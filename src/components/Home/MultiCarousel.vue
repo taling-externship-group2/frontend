@@ -1,7 +1,9 @@
 <template>
   <div class="flex justify-between">
-    <h4 class="p-1 font-bold text-xl">{{ title }}</h4>
-    <div class="">
+    <h4 class="p-1 font-bold text-xl" data-test="carousel-title">
+      {{ title }}
+    </h4>
+    <div data-test="carousel-button-container">
       <font-awesome-icon
         class="text-sm font-thin rounded-full border-2 p-1 m-1"
         icon="arrow-left"
@@ -22,7 +24,7 @@
   <div class="overflow-hidden relative w-full pt-80">
     <div class="overflow-hidden absolute inset-0 flex flex-nowrap">
       <div class="w-full flex flex-wrap ease-out duration-300" :id="title">
-        <ul class="flex flex-nowrap">
+        <ul class="flex flex-nowrap" data-test="carousel-contents">
           <slot></slot>
         </ul>
       </div>
