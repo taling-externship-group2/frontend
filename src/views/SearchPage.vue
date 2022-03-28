@@ -1,35 +1,47 @@
 <template>
   <div data-test="search-page">
     <div class="box-border h-[105px] border-1">
-      <SearchHeaderCom/>
+      <SearchHeaderCom />
     </div>
     <div class="box-border border-2 flex flex-col">
       <div class="flex justify-center box-border h-[61px] border-1">
         <button
           @click="apicall"
-          @mouseover="showModal(index)" @focus="bar"
+          @mouseover="showModal(index)"
+          @focus="bar"
           class="text-base px-3 mx-5"
-          v-for="(menu, index) in menus" :key="index">
-            {{ menu }}
-        </button>
-        <button
-          class="text-base px-5 bg-slate-100"
-          @click="showOffMenuList"
+          v-for="(menu, index) in menus"
+          :key="index"
         >
+          {{ menu }}
+        </button>
+        <button class="text-base px-5 bg-slate-100" @click="showOffMenuList">
           {{ this.show_text }}
         </button>
       </div>
       <div v-if="show_modal">
-        <MenuList
-          :menu_num="this.choice_menu_index"
-        />
+        <MenuList :menu_num="this.choice_menu_index" />
       </div>
-      <div v-if="menu_list" class="flex justify-center
-          z-0 box-border h-[217px] border-2 bg-slate-100">
+      <div
+        v-if="menu_list"
+        class="
+          flex
+          justify-center
+          z-0
+          box-border
+          h-[217px]
+          border-2
+          bg-slate-100
+        "
+      >
         <div>
           <div class="flex flex-row">
-            <div class="text-xl bg-slate-100 m-5 mr-14 font-extrabold">지역</div>
-            <select class="text-base pl-5 h-[40px] px-5 mt-4 box-border border-2">
+            <div class="text-xl bg-slate-100 m-5 mr-14 font-extrabold">
+              지역
+            </div>
+            <select
+              class="text-base pl-5 h-[40px] px-5 mt-4 box-border border-2"
+            >
               <option>{{ select_data.area[0] }}</option>
               <option>{{ select_data.area[1] }}</option>
               <option>{{ select_data.area[2] }}</option>
@@ -38,35 +50,56 @@
           </div>
           <div class="flex flex-row">
             <div class="text-xl bg-slate-100 m-5 font-extrabold">요일/시간</div>
-            <div class="flex m-3 bg-white h-[40px] w-[40px] box-border border-2"
-              v-for="(day, index) in day_arr" :key="index">
+            <div
+              class="flex m-3 bg-white h-[40px] w-[40px] box-border border-2"
+              v-for="(day, index) in day_arr"
+              :key="index"
+            >
               <button class="p-2">{{ day }}</button>
             </div>
-            <div class="flex m-3 bg-white h-[40px] w-auto box-border border-1"
-              v-for="(time, index) in time_arr" :key="index">
+            <div
+              class="flex m-3 bg-white h-[40px] w-auto box-border border-1"
+              v-for="(time, index) in time_arr"
+              :key="index"
+            >
               <button class="p-2">{{ time }}</button>
             </div>
           </div>
           <div class="flex flex-row">
             <div class="text-xl bg-slate-100 m-5 font-extrabold">수업형태</div>
-            <div class="flex m-3 bg-white h-auto w-auto box-border border-2"
-              v-for="(type, index) in class_type_arr" :key="index">
+            <div
+              class="flex m-3 bg-white h-auto w-auto box-border border-2"
+              v-for="(type, index) in class_type_arr"
+              :key="index"
+            >
               <button class="p-1">{{ type }}</button>
             </div>
-            <button class="bg-slate-500 px-4 h-auto m-3 text-white">내게 맞는 수업 보기</button>
+            <button class="bg-slate-500 px-4 h-auto m-3 text-white">
+              내게 맞는 수업 보기
+            </button>
           </div>
         </div>
       </div>
       <div
-        @mouseover="showoffModal" @focus="bar"
+        @mouseover="showoffModal"
+        @focus="bar"
         v-bind:class="[margin_top]"
-        class="h-auto flex justify-center">
-        <div class="w-[1100px] h-auto
-            flex flex-row flex-wrap justify-center content-center">
-          <div v-for="(item, index) in class_list_axios.class_list" :key="index">
-            <SearchClass
-              :class_object="item"
-            />
+        class="h-auto flex justify-center"
+      >
+        <div
+          class="
+            w-[1100px]
+            h-auto
+            flex flex-row flex-wrap
+            justify-center
+            content-center
+          "
+        >
+          <div
+            v-for="(item, index) in class_list_axios.class_list"
+            :key="index"
+          >
+            <SearchClass :class_object="item" />
           </div>
         </div>
       </div>
@@ -80,15 +113,15 @@
     </div>
     <div class="h-[50px]"></div>
     <div class="box-border h-[374.8px] border-2">
-      <FooterCom/>
+      <FooterCom />
     </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
-import MenuList from '@/components/Search/MenuList.vue';
-import SearchClass from '@/components/Search/searchClass.vue';
+import MenuList from '@/components/search/MenuList.vue';
+import SearchClass from '@/components/search/searchClass.vue';
 import SearchHeaderCom from '@/components/SearchHeaderCom.vue';
 import FooterCom from '@/components/FooterCom.vue';
 
@@ -100,12 +133,25 @@ export default {
     SearchHeaderCom,
     FooterCom,
   },
-  created() {
-  },
+  created() {},
   data() {
     return {
-      class_type_arr: ['오리지널 VOD', '온라인 LIVE', 'VOD 녹화영상', '오프라인', '전자책', '1:1 클래스', '그룹 클래스', '원데이', '다회차'],
-      time_arr: ['오전 (06:00~12:00)', '오후 (12:00~18:00)', '저녁 (18:00~24:00)'],
+      class_type_arr: [
+        '오리지널 VOD',
+        '온라인 LIVE',
+        'VOD 녹화영상',
+        '오프라인',
+        '전자책',
+        '1:1 클래스',
+        '그룹 클래스',
+        '원데이',
+        '다회차',
+      ],
+      time_arr: [
+        '오전 (06:00~12:00)',
+        '오후 (12:00~18:00)',
+        '저녁 (18:00~24:00)',
+      ],
       day_arr: ['월', '화', '수', '목', '금', '토', '일'],
       margin_top: '',
       choice_menu_index: 0,
@@ -221,8 +267,7 @@ export default {
             Authorization: apiKey,
           },
         })
-        .then(() => {
-        });
+        .then(() => {});
     },
     showOffMenuList() {
       this.margin_top = '';
