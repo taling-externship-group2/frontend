@@ -120,10 +120,10 @@
 
 <script>
 import axios from 'axios';
-import MenuList from '@/components/search/MenuList.vue';
-import SearchClass from '@/components/search/searchClass.vue';
 import SearchHeaderCom from '@/components/SearchHeaderCom.vue';
 import FooterCom from '@/components/FooterCom.vue';
+import MenuList from '@/components/Search/MenuList.vue';
+import SearchClass from '@/components/Search/searchClass.vue';
 
 export default {
   name: 'SearchPage',
