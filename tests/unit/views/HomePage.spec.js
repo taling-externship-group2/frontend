@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import HomePage from '@/views/HomePage.vue';
+import HomePage from '@/views/Home/HomePage.vue';
 
 describe('홈 페이지의 헤더 영역의 대한 테스트 입니다.', () => {
   const wrapper = mount(HomePage);
