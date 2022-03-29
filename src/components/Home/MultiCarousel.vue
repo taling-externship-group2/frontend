@@ -23,7 +23,10 @@
   </div>
   <div class="overflow-hidden relative w-full pt-80">
     <div class="overflow-hidden absolute inset-0 flex flex-nowrap">
-      <div class="w-full flex flex-wrap ease-out duration-300" :id="title">
+      <div
+        class="w-full flex flex-wrap ease-out duration-300"
+        :ref="`carousel-content-${title}`"
+      >
         <ul class="flex flex-nowrap" data-test="carousel-contents">
           <slot></slot>
         </ul>
@@ -46,7 +49,7 @@ export default {
   },
   methods: {
     slideAction() {
-      const carouselContent = document.getElementById(`${this.title}`);
+      const carouselContent = this.$refs[`carousel-content-${this.title}`];
       if (carouselContent) {
         const size = carouselContent.clientWidth;
         carouselContent.style.transform = `translateX(-${
