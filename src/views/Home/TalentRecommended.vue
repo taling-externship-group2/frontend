@@ -31,8 +31,8 @@ export default {
   data() {
     return {
       talents: talentsModel,
-      slidesToShow: 4,
-      slideWidth: this.slidesToShow / 100,
+      slidesToShow: 3,
+      slideWidth: 33,
     };
   },
 };

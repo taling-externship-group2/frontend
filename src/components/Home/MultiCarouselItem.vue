@@ -91,10 +91,10 @@ export default {
     return {
       wishImage:
         'https://front-img.taling.me/Content/app3/img/icon/icWishUnclickedLine38Px@2x.png',
-      slideWidth: 25,
     };
   },
   props: {
+    slideWidth: { type: Number, default: -1 },
     id: { type: String, default: '' },
     image: { type: String, default: '' },
     badge_list: {
