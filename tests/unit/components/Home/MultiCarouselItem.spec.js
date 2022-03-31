@@ -1,8 +1,8 @@
 import { mount } from '@vue/test-utils';
-import TalentItem from '@/components/Home/TalentItem.vue';
+import MultiCarouselItem from '@/components/Home/MultiCarouselItem.vue';
 
 describe('클래스 목록 아이템 컴포넌트의 element 존재여부에 대한 검증입니다.', () => {
-  const wrapper = mount(TalentItem);
+  const wrapper = mount(MultiCarouselItem);
 
   test('썸네일 이미지가 존재해야합니다. ', () => {
     expect(wrapper.find('img[data-test="talent-thumb-image"]').exists()).toBeTruthy();
@@ -65,7 +65,7 @@ describe('TalentList.vue페이지에서 사용될 TalentItem.vue컴포넌트의 
     talent_title: 'How to build coherent unit test cases and E2E test cases',
   };
 
-  const wrapper = mount(TalentItem, {
+  const wrapper = mount(MultiCarouselItem, {
     props: testProps,
   });
 
