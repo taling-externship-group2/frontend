@@ -22,15 +22,14 @@
     </div>
   </div>
   <div class="overflow-hidden relative w-full pt-80">
-    <div class="overflow-hidden absolute inset-0 flex flex-nowrap">
-      <div
-        class="w-full flex flex-wrap ease-out duration-300"
+    <div class="absolute inset-0">
+      <ul
+        class="flex flex-nowrap ease-out duration-300"
         :ref="`carousel-content-${title}`"
+        data-test="carousel-contents"
       >
-        <ul class="flex flex-nowrap" data-test="carousel-contents">
-          <slot></slot>
-        </ul>
-      </div>
+        <slot></slot>
+      </ul>
     </div>
   </div>
 </template>
@@ -46,15 +45,16 @@ export default {
   props: {
     title: { type: String, default: '' },
     totalSlide: { type: Number, default: -1 },
+    slidesToShow: { type: Number, default: -1 },
   },
   methods: {
     slideAction() {
       const carouselContent = this.$refs[`carousel-content-${this.title}`];
       if (carouselContent) {
         const size = carouselContent.clientWidth;
-        carouselContent.style.transform = `translateX(-${
-          (this.slideIndex * size) / 3
-        }px)`;
+        carouselContent.style.transform = `translateX(-${Math.floor(
+          (this.slideIndex * size) / this.slidesToShow,
+        )}px)`;
       }
     },
     prevSlide() {

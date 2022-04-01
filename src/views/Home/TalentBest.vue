@@ -2,22 +2,22 @@
   <div data-test="talent-best">
     <h1 class="font-bold pl-2">탈잉 BEST</h1>
     <ul class="flex flex-wrap">
-      <TalentItem
+      <MultiCarouselItem
         v-for="talent in talentsApi"
         :key="talent.id"
         v-bind="talent"
-      ></TalentItem>
+      ></MultiCarouselItem>
     </ul>
   </div>
 </template>
 
 <script>
-import TalentItem from '@/components/Home/TalentItem.vue';
+import MultiCarouselItem from '@/components/Home/MultiCarouselItem.vue';
 import TalentItemApi from '@/api/Home/TalentList';
 
 export default {
   components: {
-    TalentItem,
+    MultiCarouselItem,
   },
   data() {
     return {

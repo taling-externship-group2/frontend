@@ -1,34 +1,38 @@
 <template>
   <div data-test="talent-recommended">
-    <MultiCarousel
+    <MultiCarouselControl
       v-for="talent in talents"
       :key="talent.id"
       :title="talent.title"
       :totalSlide="talent.contents.length"
+      :slidesToShow="slidesToShow"
     >
-      <TalentItem
+      <MultiCarouselItem
         v-for="talent in talent.contents"
         :key="talent.id"
+        :slideWidth="slideWidth"
         v-bind="talent"
       >
-      </TalentItem>
-    </MultiCarousel>
+      </MultiCarouselItem>
+    </MultiCarouselControl>
   </div>
 </template>
 
 <script>
-import TalentItem from '@/components/Home/TalentItem.vue';
-import MultiCarousel from '@/components/Home/MultiCarousel.vue';
+import MultiCarouselItem from '@/components/Home/MultiCarouselItem.vue';
+import MultiCarouselControl from '@/components/Home/MultiCarouselControl.vue';
 import talentsModel from '@/model/Home/TalentRecommended';
 
 export default {
   components: {
-    TalentItem,
-    MultiCarousel,
+    MultiCarouselItem,
+    MultiCarouselControl,
   },
   data() {
     return {
       talents: talentsModel,
+      slidesToShow: 3,
+      slideWidth: 33,
     };
   },
 };
