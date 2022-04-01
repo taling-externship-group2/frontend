@@ -99,9 +99,14 @@
   </header>
   <main>
     <div class="max-w-6xl mx-auto px-4">
+      <div class="mb-16" data-test="visual">
+        <RollingBanner></RollingBanner>
+      </div>
+      <CategoryWrapper></CategoryWrapper>
+    </div>
+    <div class="max-w-6xl mx-auto px-4">
       <div class="flex">
         <div class="flex flex-col w-2/3 left-column">
-          <RollingBanner></RollingBanner>
           <TalentsList></TalentsList>
         </div>
       </div>
@@ -115,6 +120,7 @@
 <script>
 import RollingBanner from '@/views/Home/RollingBanner.vue';
 import TalentsList from '@/views/Home/TalentsWrapper.vue';
+import CategoryWrapper from '@/views/Home/CategoryWrapper.vue';
 import Footer from '@/components/FooterCom.vue';
 
 export default {
@@ -122,6 +128,7 @@ export default {
   components: {
     RollingBanner,
     TalentsList,
+    CategoryWrapper,
     Footer,
   },
   data() {
