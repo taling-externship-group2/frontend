@@ -1,5 +1,9 @@
 <template>
-  <li :class="`min-w-[${slideWidth}%]`" class="px-2 relative" :data-test="id">
+  <li
+    :class="`min-w-[${slideWidth}%]`"
+    class="w-1/3 px-2 relative"
+    :data-test="id"
+  >
     <img
       :src="image"
       class="w-full h-32 rounded-lg"
