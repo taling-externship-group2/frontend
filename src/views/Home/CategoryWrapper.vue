@@ -1,6 +1,6 @@
 <template>
   <div class="mb-16">
-    <ul class="flex" data-test="category">
+    <ul class="flex" data-test="category-wrapper">
       <CategoryItem
         v-for="category in list_category"
         :key="category.category_id"

@@ -1,7 +1,11 @@
 <template>
-  <li :class="`w-[${itemWidth}%]`" class="text-center font-bold">
-    <a :href="`${link_url}`"
-      ><span
+  <li
+    :class="`w-[${itemWidth}%]`"
+    class="text-center font-bold"
+    data-test="category-item"
+  >
+    <a :href="`${link_url}`" data-test="category-link">
+      <span
         class="
           block
           w-[68px]
@@ -11,9 +15,10 @@
           bg-contain bg-slate-50
           rounded-lg
         "
-        :style="{ backgroundImage: `url(${image_url})` }"
-      ></span
-      >{{ text }}
+        :style="getBackgroundImage"
+        data-test="category-image"
+      ></span>
+      {{ text }}
     </a>
   </li>
 </template>
@@ -26,6 +31,13 @@ export default {
     image_url: { type: String, default: '' },
     text: { type: String, default: '' },
     category_id: { type: String, default: '' },
+  },
+
+  computed: {
+    getBackgroundImage() {
+      const result = `background-image: url(${this.image_url})`;
+      return result;
+    },
   },
 };
 </script>
